@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>jocarsa | microchat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="mark" aria-hidden="true">◎</div>
+        <div class="brandText">
+          <div class="title">jocarsa | microchat</div>
+          <div class="subtitle">KB local (no inventa) + extras: guardar KB y descargar chat</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="strictBtn" class="btn ghost" title="Activar/desactivar modo estricto">Estricto: OFF</button>
+        <button id="downloadBtn" class="btn ghost" title="Descargar conversación">Descargar</button>
+        <button id="copyBtn" class="btn ghost" title="Copiar última respuesta">Copiar</button>
+        <button id="clearBtn" class="btn ghost" title="Limpiar chat">Limpiar</button>
+      </div>
+    </header>
+
+    <main id="chat" class="chat" aria-live="polite">
+      <div class="hint">
+        Escribe una pregunta y pulsa <b>Enviar</b>. Usa <b>Shift+Enter</b> para salto de línea.
+        <div class="hintRow">
+          <button id="examplesBtn" class="btn small">Ejemplos</button>
+          <span id="health" class="health">Estado: —</span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="composer">
+      <div class="composerInner">
+        <textarea id="input" rows="1" placeholder="Escribe tu mensaje…" spellcheck="false" autocomplete="off"></textarea>
+        <button id="sendBtn" class="btn primary">Enviar</button>
+      </div>
+      <div class="composerMeta">
+        <span class="metaItem">Enter: enviar</span>
+        <span class="metaDot">•</span>
+        <span class="metaItem">Shift+Enter: salto</span>
+        <span class="metaDot">•</span>
+        <span class="metaItem">Estricto: “No lo sé…” si no hay match</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
